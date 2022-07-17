@@ -9,8 +9,8 @@ from aiogram.utils.markdown import hlink
 @dp.message_handler(lambda message: message.text.lower() == "поделиться")
 async def sned_game_information(message: Message):
     await message.answer(f"Для того что-бы поделиться игрой с другим пользователем вам нужно:\nЗайдите в диалог к тому кого хотите пригласить\nОбратитесь к боту написав @{BOT_USERNAME}\nЗатем начните вводить ID комнаты\nКогда закончите посмотрите результат\nЕсли результат будет содержать ваш ID комнаты, то нажмите на него и автоматически будет создана ссылка для вступления в комнату\nПример результата:")
-    await message.answer_photo("AgACAgIAAxkBAAIh0GLTyH_lqIur_dQGsZDaDBbz5yx1AAKIvDEbGHGhSiGZxAeinDi3AQADAgADcwADKQQ")
-    await message.answer_photo("AgACAgIAAxkBAAIh3GLTyWmLbixjx3JMNmS90selk4hKAAKMvDEbGHGhSmSgZVkCBnr7AQADAgADcwADKQQ")
+    await message.answer_photo("https://i.ibb.co/tQ8XvmF/photo-2022-07-17-15-29-52.jpg")
+    await message.answer_photo("https://i.ibb.co/XF4NqH4/photo-2022-07-17-15-33-45.jpg")
 
 
 @dp.inline_handler()
