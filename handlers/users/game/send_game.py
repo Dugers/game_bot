@@ -28,7 +28,7 @@ async def send_game(query: InlineQuery):
         sending_text = f"Игровая комната с ID: <b>{text}</b>"
         sending_text += f"\nСоздатель комнаты: <b>{owner_game['name']}</b>"
         sending_text += f"\nТип игры : <b>{type_game}</b>"
-        sending_text += f"\n<b>{hlink('Вступить в игру', f'https://t.me/testbotlearn_bot?start=join_{text}')}</b>"
+        sending_text += f"\n<b>{hlink('Вступить в игру', f'https://t.me/{BOT_USERNAME}?start=join_{text}')}</b>"
     except:
         title_text = "Такой игры не существует"
         sending_text = "Такой игры не существует"
