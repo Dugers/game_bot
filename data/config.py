@@ -17,10 +17,10 @@ DB_DATABASE = getenv('DB_DATABASE')
 DB_DSN = getenv('DATABASE_URL')
 
 # deploy webhook config
-HEROKU_APP_NAME = getenv('HEROKU_APP_NAME')
-WEBHOOK_HOST = f'https://{HEROKU_APP_NAME}.herokuapp.com'
-WEBHOOK_PATH = f'/token/{BOT_TOKEN}'
+NGROK_URL = getenv("NGROK_URL")
+WEBHOOK_HOST = f'{NGROK_URL}'
+WEBHOOK_PATH = ''
 WEBHOOK_URL = f"{WEBHOOK_HOST}{WEBHOOK_PATH}"
 
-WEBAPP_HOST = '0.0.0.0'
-WEBAPP_PORT = getenv('PORT', 8000)
+WEBAPP_HOST = 'localhost'
+WEBAPP_PORT = getenv('NGROK_PORT', 80)
