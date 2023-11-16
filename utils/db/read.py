@@ -4,9 +4,9 @@ from .conn import get_conn
 async def get_users(telegram_id=False, count=False):
     conn = await get_conn()
     if telegram_id:
-        res = await conn.fetchrow('SELECT * FROM users WHERE telegram_id = $1', telegram_id)
+        res = await conn.fetchrow('SELECT * FROM users1 WHERE telegram_id = $1', telegram_id)
     elif count:
-        res = await conn.fetchrow('SELECT COUNT(*) FROM users')
+        res = await conn.fetchrow('SELECT COUNT(*) FROM users1')
     await conn.close()
     return res
 

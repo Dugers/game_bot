@@ -10,7 +10,7 @@ async def create_tables():
 
 async def create_table_users(conn):
     await conn.execute('''
-    CREATE TABLE IF NOT EXISTS users (
+    CREATE TABLE IF NOT EXISTS users1 (
         id serial PRIMARY KEY,
         telegram_id bigint,
         name text,
@@ -35,7 +35,7 @@ async def create_table_games(conn):
 
 async def create_user(telegram_id, name):
     conn = await get_conn()
-    await conn.execute('INSERT INTO users(telegram_id, name) VALUES($1, $2)', telegram_id, name)
+    await conn.execute('INSERT INTO users1(telegram_id, name) VALUES($1, $2)', telegram_id, name)
     await conn.close()
 
 
